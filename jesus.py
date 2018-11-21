@@ -2,13 +2,11 @@ from PIL import Image, ImageFont # noqa
 import facebook # noqa
 import json
 import sys
-import os
 import themes as th # noqa
 import extra as ex # noqa
 import grad_gen as grad
 
 text_center = ex.text_center
-print(os.)
 
 '''
     This file contains the main mechanisms for posting to the
