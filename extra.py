@@ -129,6 +129,7 @@ def conv_color_name(r, g, b, colors):
             newNAMEtext += "\n"
         newNAMEtext += word + " "
     NAMEtext = newNAMEtext[:-1]
+    NAMEtext = NAMEtext.upper()
 
     if min_diff == 0:
         DIFFtext = ""
