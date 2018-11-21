@@ -2,11 +2,13 @@ from PIL import Image, ImageFont # noqa
 import facebook # noqa
 import json
 import sys
+import os
 import themes as th # noqa
 import extra as ex # noqa
 import grad_gen as grad
 
 text_center = ex.text_center
+print(os.)
 
 '''
     This file contains the main mechanisms for posting to the
@@ -16,18 +18,18 @@ text_center = ex.text_center
 
 # Import the details for the page and link to the Facebook API.
 
-env = json.loads(open(sys.path[0] + '\\env.json').read())
+env = json.loads(open(sys.path[0] + '/env.json').read())
 page_id = env['page_id']
 _access_token = env['page_token']
 graph = facebook.GraphAPI(access_token=_access_token)
 
 # Import the color dictionary and themes files.
-colors = json.loads(open(sys.path[0] + '\\json\\colors.json').read())
-themes = json.loads(open(sys.path[0] + '\\json\\themes.json').read())
+colors = json.loads(open(sys.path[0] + '/json/colors.json').read())
+themes = json.loads(open(sys.path[0] + '/json/themes.json').read())
 
-font_path = sys.path[0] + "\\fonts\\TitilliumWeb-SemiBold.ttf"
+font_path = sys.path[0] + "/fonts/TitilliumWeb-SemiBold.ttf"
 font = ImageFont.truetype(font_path, 60)
-font_path = sys.path[0] + "\\fonts\\Inconsolata-Bold.ttf"
+font_path = sys.path[0] + "/fonts/Inconsolata-Bold.ttf"
 name_font = ImageFont.truetype(font_path, 80)
 diff_font = ImageFont.truetype(font_path, 60)
 
@@ -156,18 +158,18 @@ def post(num):
     message = get_message(num, cols)
 
     plain = get_base_image(num, cols)
-    plain.save(sys.path[0] + '\\plain.png', 'PNG')
+    plain.save(sys.path[0] + '/plain.png', 'PNG')
 
     labelled = label_image(plain, num, cols)
-    labelled.save(sys.path[0] + '\\labelled.png', 'PNG')
+    labelled.save(sys.path[0] + '/labelled.png', 'PNG')
 
-    post_id = graph.put_photo(image=open(sys.path[0] + '\\labelled.png', 'rb'),
+    post_id = graph.put_photo(image=open(sys.path[0] + '/labelled.png', 'rb'),
                              message=theme)['post_id']
 
-    with open(sys.path[0] + '\\postids\\postids.txt', 'a') as f:
+    with open(sys.path[0] + '/postids/postids.txt', 'a') as f:
         f.write(str(post_id) + '\n')
 
-    graph.put_photo(image=open(sys.path[0] + '\\plain.png', 'rb'),
+    graph.put_photo(image=open(sys.path[0] + '/plain.png', 'rb'),
                     message = message, album_path=str(post_id) + '/comments')
 
 
@@ -176,10 +178,10 @@ def custom(num):
     cols = [current_theme.getRandom() for j in range(4)]
 
     plain = get_base_image(num, cols)
-    plain.save(sys.path[0] + '\\plain.png', 'PNG')
+    plain.save(sys.path[0] + '/plain.png', 'PNG')
 
     labelled = label_image(plain, num, cols)
-    labelled.save(sys.path[0] + '\\labelled.png', 'PNG')
+    labelled.save(sys.path[0] + '/labelled.png', 'PNG')
 
     message = get_message(num, cols)
     print(message)
