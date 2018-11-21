@@ -112,6 +112,7 @@ def convert_cmyk(r, g, b):
         return (c, m, y, k)
 
 def conv_color_name(r, g, b, colors):
+    min_diff = math.sqrt(3 * 255**2)
     for color, rgb in colors.items():
         p = [r-rgb[0], g-rgb[1], b-rgb[2]]
         dist = math.sqrt(p[0]**2 + p[1]**2 + p[2]**2)
