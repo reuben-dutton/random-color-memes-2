@@ -119,8 +119,9 @@ def get_message(num, cols):
     message = ""
     for i in range(num):
         r, g, b = cols[i]
-        message += ex.get_message(r, g, b, colors)
+        message += ex.get_info(r, g, b, colors)
         message += "\n\n"
+    return message[:-2]
 
 def retrieve_theme():
     '''
@@ -169,6 +170,8 @@ def post(num):
 
     graph.put_photo(image=open(sys.path[0] + '/plain.png', 'rb'),
                     message = message, album_path=str(post_id) + '/comments')
+
+    print(message)
 
 
 def custom(num):
