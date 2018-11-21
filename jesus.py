@@ -140,7 +140,7 @@ def retrieve_theme():
     theme = themes[theme_name]
 
     # Create an empty ColorTheme object with the correct name.
-    result = js.ColorTheme(theme_name)
+    result = th.ColorTheme(theme_name)
 
     # Import the colors associated with the theme into the ColorTheme
     # object and return it.
