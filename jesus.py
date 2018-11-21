@@ -51,7 +51,7 @@ offset = (90, 240)
 
 
 
-def label_image(image, num, cols):
+def label_image(base_image, num, cols):
     title_pos = pos[num-1]
     for i in range(num):
         r, g, b = cols[i]
