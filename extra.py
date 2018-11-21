@@ -1,5 +1,6 @@
 from PIL import Image, ImageDraw, ImageFilter
 import math
+import string
 
 
 def text_center(text, font, fill, bounds, image):
