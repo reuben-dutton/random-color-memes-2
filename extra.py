@@ -149,9 +149,9 @@ def get_info(r, g, b, colors):
     hexa = "#%02X%02X%02X" % (r, g, b)
     rgb = "({}, {}, {})".format(r, g, b)
     h, s, v = convert_hsv(r, g, b)
-    hsv = "(%.1f°, %.1f%%, %.1f%%)".format(h, s, v)
+    hsv = "(%.1f°, %.1f%%, %.1f%%)" % (h, s, v)
     c, m, y, k = convert_cmyk(r, g, b)
-    cmyk = "(%.2f, %.2f, %.2f, %.2f)".format(h, s, v)
+    cmyk = "(%.2f, %.2f, %.2f, %.2f)" % (c, m, y, k)
     approx_wavelength = -6.173261112*(10**-11)*(h**6) \
     + 5.515102757*(10**-8)*(h**5) \
     - 1.890868343*(10**-5)*(h**4) \
