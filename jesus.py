@@ -38,14 +38,14 @@ icon_color = (255, 255, 255, 255)
 
 pos = [[[int(imsw/2), int(1.5*imsh/25)]],
        [[int(imsw/2), int(1.5*imsh/25)], 
-        [int(imsw/2), int(21*imsh/25)]],
+        [int(imsw/2), int(20.5*imsh/25)]],
        [[int(imsw/2), int(1.5*imsh/25)],
-        [int(imsw/5), int(21*imsh/25)],
-        [int(4*imsw/5), int(21*imsh/25)]],
+        [int(imsw/5), int(20.5*imsh/25)],
+        [int(4*imsw/5), int(20.5*imsh/25)]],
        [[int(imsw/5), int(1.5*imsh/25)],
         [int(4*imsw/5), int(1.5*imsh/25)],
-        [int(imsw/5), int(21*imsh/25)],
-        [int(4*imsw/5), int(21*imsh/25)]]]
+        [int(imsw/5), int(20.5*imsh/25)],
+        [int(4*imsw/5), int(20.5*imsh/25)]]]
 
 offset = (120, 260)
 
