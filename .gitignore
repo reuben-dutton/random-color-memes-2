@@ -1,0 +1,10 @@
+*.gif
+*.jpeg
+*.jpg
+*.png
+*.pyc
+postids.txt
+postidsmonthly.txt
+postidsalltime.txt
+current.txt
+env.json

@@ -26,7 +26,7 @@ colors = json.loads(open(sys.path[0] + '/json/colors.json').read())
 themes = json.loads(open(sys.path[0] + '/json/themes.json').read())
 
 font_path = sys.path[0] + "/fonts/TitilliumWeb-SemiBold.ttf"
-font = ImageFont.truetype(font_path, 60)
+font = ImageFont.truetype(font_path, 65)
 font_path = sys.path[0] + "/fonts/Inconsolata-Bold.ttf"
 name_font = ImageFont.truetype(font_path, 80)
 diff_font = ImageFont.truetype(font_path, 60)
@@ -47,8 +47,7 @@ pos = [[[int(imsw/2), int(1.5*imsh/25)]],
         [int(imsw/5), int(21*imsh/25)],
         [int(4*imsw/5), int(21*imsh/25)]]]
 
-offset = (90, 240)
-
+offset = (120, 260)
 
 
 def label_image(base_image, num, cols):
@@ -62,7 +61,7 @@ def label_image(base_image, num, cols):
 
         RGBtext = "({}, {}, {})".format(r, g, b)
 
-        diff_size = (300, 70)
+        diff_size = (450, 70)
         diff_pos = (title_pos[i][0], title_pos[i][1])
         dw, dh = diff_size
         dpw, dph = diff_pos
@@ -72,7 +71,7 @@ def label_image(base_image, num, cols):
                        int(dpw + dw / 2),
                        int(dph + dh / 2)]
 
-        name_size = (500, 90)
+        name_size = (500, 170)
         name_pos = (title_pos[i][0], title_pos[i][1] + offset[0])
         nw, nh = name_size
         npw, nph = name_pos
@@ -82,7 +81,7 @@ def label_image(base_image, num, cols):
                        int(npw + nw / 2),
                        int(nph + nh / 2)]
 
-        hex_size = (300, 240)
+        hex_size = (300, 90)
         hex_pos = (title_pos[i][0], title_pos[i][1] + offset[1])
         hw, hh = hex_size
         hpw, hph = hex_pos
@@ -109,6 +108,7 @@ def label_image(base_image, num, cols):
                                  icon_color,
                                  hex_bounds,
                                  base_image)
+
     return base_image
 
 def get_base_image(num, cols):

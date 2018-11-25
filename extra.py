@@ -124,9 +124,12 @@ def conv_color_name(r, g, b, colors):
             else:
                 NAMEtext = string.capwords(color)
     newNAMEtext = ""
+    length = 0
     for word in NAMEtext.split():
-        if len(newNAMEtext) > 15:
-            newNAMEtext += "\n"
+        length += len(word) + 1
+        if len(newNAMEtext) > 16:
+            newNAMEtext = newNAMEtext[:-1] + "\n"
+            length = 0
         newNAMEtext += word + " "
     NAMEtext = newNAMEtext[:-1]
     NAMEtext = NAMEtext.upper()
