@@ -137,7 +137,7 @@ def conv_color_name(r, g, b, colors):
     if min_diff == 0:
         DIFFtext = ""
     elif min_diff < 5:
-        DIFFtext = "Identical to"
+        DIFFtext = "Indistinguishable from"
     elif min_diff < 10:
         DIFFtext = "Very close to"
     elif min_diff < 15:
