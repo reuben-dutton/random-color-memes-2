@@ -16,10 +16,10 @@ text_center = ex.text_center
 
 # Import the details for the page and link to the Facebook API.
 
-env = json.loads(open(sys.path[0] + '/env.json').read())
-page_id = env['page_id']
-_access_token = env['page_token']
-graph = facebook.GraphAPI(access_token=_access_token)
+# env = json.loads(open(sys.path[0] + '/env.json').read())
+# page_id = env['page_id']
+# _access_token = env['page_token']
+# graph = facebook.GraphAPI(access_token=_access_token)
 
 # Import the color dictionary and themes files.
 colors = json.loads(open(sys.path[0] + '/json/colors.json').read())
@@ -177,8 +177,8 @@ def post(num):
 def custom(num):
     # current_theme = retrieve_theme()
     # cols = [current_theme.getRandom() for j in range(4)]
-    cols = [[50, 50, 255],
-    		[200, 0, 55]]
+    cols = [[44, 153, 34],
+    		[235, 251, 38]]
 
     plain = get_base_image(num, cols)
     plain.save(sys.path[0] + '/plain.png', 'PNG')

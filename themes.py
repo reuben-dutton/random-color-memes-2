@@ -174,7 +174,7 @@ class ColorTheme():
         '''
         # Set the weight for each bubble to be in proportion to
         # the size of each bubble (using radius).
-        weights = [bubble._r for bubble in list(self._cbs)]
+        weights = [(bubble._r)**0.1 for bubble in list(self._cbs)]
         total = sum(weights)
         weights = [w / total for w in weights]
 
