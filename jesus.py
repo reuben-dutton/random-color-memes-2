@@ -16,10 +16,10 @@ text_center = ex.text_center
 
 # Import the details for the page and link to the Facebook API.
 
-# env = json.loads(open(sys.path[0] + '/env.json').read())
-# page_id = env['page_id']
-# _access_token = env['page_token']
-# graph = facebook.GraphAPI(access_token=_access_token)
+env = json.loads(open(sys.path[0] + '/env.json').read())
+page_id = env['page_id']
+_access_token = env['page_token']
+graph = facebook.GraphAPI(access_token=_access_token)
 
 # Import the color dictionary and themes files.
 colors = json.loads(open(sys.path[0] + '/json/colors.json').read())

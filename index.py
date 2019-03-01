@@ -3,4 +3,4 @@ import sys
 
 num = int(sys.argv[1])
 
-jesus.custom(num)
+jesus.post(num)
