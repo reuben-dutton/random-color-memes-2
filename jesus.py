@@ -177,9 +177,8 @@ def post(num):
 def custom(num):
     # current_theme = retrieve_theme()
     # cols = [current_theme.getRandom() for j in range(4)]
-    cols = [[44, 153, 34],
-    		[235, 251, 38]]
-
+    cols = [[0, 0, 0],
+    		[255, 255, 0]]
     plain = get_base_image(num, cols)
     plain.save(sys.path[0] + '/plain.png', 'PNG')
 
